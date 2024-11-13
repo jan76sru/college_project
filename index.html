@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Arithmetic Calculations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Learn Arithmetic Calculations</h1>
+    </header>
+
+    <section id="settings">
+        <h2>Settings</h2>
+        <label for="numQuestions">Number of Questions:</label>
+        <input type="number" id="numQuestions" min="1" max="20" value="10">
+
+        <label for="numRange">Number Range:</label>
+        <input type="number" id="numRange" min="1" max="100" value="10">
+
+        <label for="operations">Arithmetic Operations:</label>
+        <select id="operations">
+            <option value="add">Addition</option>
+            <option value="subtract">Subtraction</option>
+            <option value="multiply">Multiplication</option>
+            <option value="divide">Division</option>
+        </select>
+
+        <label for="timer">Timer (seconds per question):</label>
+        <input type="number" id="timer" min="5" max="60" value="10">
+
+        <button onclick="startQuiz()">Start Quiz</button>
+    </section>
+
+    <section id="questionnaire" style="display: none;">
+        <h2>Questionnaire</h2>
+        <p id="questionText"></p>
+        <input type="number" id="answerInput">
+        <button onclick="submitAnswer()">Submit Answer</button>
+    </section>
+
+    <section id="result" style="display: none;">
+        <h2>Result</h2>
+        <p id="scoreText"></p>
+        <p id="timeText"></p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
